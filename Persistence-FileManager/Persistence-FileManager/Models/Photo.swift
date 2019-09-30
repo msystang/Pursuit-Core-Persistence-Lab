@@ -8,8 +8,13 @@
 
 import Foundation
 
-struct Photo: Codable {
+struct PhotoWrapper: Codable {
+    let hits: [Photo]
+}
 
+struct Photo: Codable {
+    let id: Int
+    let largeImageURL: String
     
     static func decodePhotosFromData(from jsonData: Data) throws -> [Photo] {
         let response = try JSONDecoder().decode([Photo].self, from: jsonData)
