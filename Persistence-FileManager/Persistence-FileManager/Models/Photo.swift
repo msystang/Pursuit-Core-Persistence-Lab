@@ -23,7 +23,7 @@ struct Photo: Codable {
     }
     
     static func decodePhotosFromData(from jsonData: Data) throws -> [Photo] {
-        let response = try JSONDecoder().decode([Photo].self, from: jsonData)
-        return response
+        let response = try JSONDecoder().decode(PhotoWrapper.self, from: jsonData)
+        return response.hits
     }
 }
