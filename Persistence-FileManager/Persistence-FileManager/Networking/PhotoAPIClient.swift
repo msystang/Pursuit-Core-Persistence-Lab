@@ -16,10 +16,8 @@ struct PhotoAPIClient {
     
     // MARK: - Instance Methods
     
-
-    
     static func getSearchResultsURLStr(from searchString: String) -> String {
-        return "....\(searchString)"
+        return "https://pixabay.com/api/?key=\(Secrets.apiKey)&q=\(searchString)&image_type=photo&pretty=true"
     }
     
     func getPhotos(urlStr: String, completionHandler: @escaping (Result<[Photo], AppError>) -> ())  {
@@ -45,7 +43,6 @@ struct PhotoAPIClient {
             }
         }
     }
-    
     
     // MARK: - Private Properties and Initializers
     

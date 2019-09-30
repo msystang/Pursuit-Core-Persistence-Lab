@@ -14,7 +14,13 @@ struct PhotoWrapper: Codable {
 
 struct Photo: Codable {
     let id: Int
-    let largeImageURL: String
+    let imageURL: String
+    let tags: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, tags
+        case imageURL = "webformatURL"
+    }
     
     static func decodePhotosFromData(from jsonData: Data) throws -> [Photo] {
         let response = try JSONDecoder().decode([Photo].self, from: jsonData)

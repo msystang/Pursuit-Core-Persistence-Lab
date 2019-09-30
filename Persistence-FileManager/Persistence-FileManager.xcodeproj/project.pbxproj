@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA458B4B234288F800A37F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B4A234288F800A37F3E /* AppDelegate.swift */; };
 		EA458B4D234288F800A37F3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B4C234288F800A37F3E /* SceneDelegate.swift */; };
-		EA458B4F234288F800A37F3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B4E234288F800A37F3E /* ViewController.swift */; };
+		EA458B4F234288F800A37F3E /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B4E234288F800A37F3E /* PhotoListViewController.swift */; };
 		EA458B52234288F800A37F3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA458B50234288F800A37F3E /* Main.storyboard */; };
 		EA458B54234288F800A37F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA458B53234288F800A37F3E /* Assets.xcassets */; };
 		EA458B57234288F800A37F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA458B55234288F800A37F3E /* LaunchScreen.storyboard */; };
@@ -21,13 +21,19 @@
 		EA458B6F23428C0800A37F3E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B6E23428C0800A37F3E /* AppError.swift */; };
 		EA458B7123428D7800A37F3E /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B7023428D7800A37F3E /* ImageHelper.swift */; };
 		EA458B7323429BB800A37F3E /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B7223429BB800A37F3E /* Secrets.swift */; };
+		EA458B752342A0D300A37F3E /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B742342A0D300A37F3E /* PhotoDetailViewController.swift */; };
+		EA458B772342A0E400A37F3E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B762342A0E400A37F3E /* FavoriteViewController.swift */; };
+		EA458B792342A0F100A37F3E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B782342A0F100A37F3E /* Favorite.swift */; };
+		EA458B7B2342A16900A37F3E /* FavoriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B7A2342A16900A37F3E /* FavoriteDetailViewController.swift */; };
+		EA458B7D2342A1E000A37F3E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B7C2342A1E000A37F3E /* PhotoCollectionViewCell.swift */; };
+		EA458B7F2342A1FA00A37F3E /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA458B7E2342A1FA00A37F3E /* FavoriteCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA458B47234288F800A37F3E /* Persistence-FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persistence-FileManager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA458B4A234288F800A37F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA458B4C234288F800A37F3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA458B4E234288F800A37F3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA458B4E234288F800A37F3E /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		EA458B51234288F800A37F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA458B53234288F800A37F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA458B56234288F800A37F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +46,12 @@
 		EA458B6E23428C0800A37F3E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		EA458B7023428D7800A37F3E /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		EA458B7223429BB800A37F3E /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		EA458B742342A0D300A37F3E /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		EA458B762342A0E400A37F3E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		EA458B782342A0F100A37F3E /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		EA458B7A2342A16900A37F3E /* FavoriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewController.swift; sourceTree = "<group>"; };
+		EA458B7C2342A1E000A37F3E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA458B7E2342A1FA00A37F3E /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				EA458B50234288F800A37F3E /* Main.storyboard */,
+				EA458B7C2342A1E000A37F3E /* PhotoCollectionViewCell.swift */,
+				EA458B7E2342A1FA00A37F3E /* FavoriteCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,7 +108,10 @@
 		EA458B5F2342891B00A37F3E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA458B4E234288F800A37F3E /* ViewController.swift */,
+				EA458B4E234288F800A37F3E /* PhotoListViewController.swift */,
+				EA458B742342A0D300A37F3E /* PhotoDetailViewController.swift */,
+				EA458B762342A0E400A37F3E /* FavoriteViewController.swift */,
+				EA458B7A2342A16900A37F3E /* FavoriteDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				EA458B6723428ADB00A37F3E /* Photo.swift */,
+				EA458B782342A0F100A37F3E /* Favorite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,13 +229,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA458B6A23428BA500A37F3E /* NetworkHelper.swift in Sources */,
+				EA458B792342A0F100A37F3E /* Favorite.swift in Sources */,
+				EA458B7B2342A16900A37F3E /* FavoriteDetailViewController.swift in Sources */,
 				EA458B7123428D7800A37F3E /* ImageHelper.swift in Sources */,
 				EA458B6823428ADB00A37F3E /* Photo.swift in Sources */,
 				EA458B6F23428C0800A37F3E /* AppError.swift in Sources */,
 				EA458B6D23428BE700A37F3E /* PhotoAPIClient.swift in Sources */,
-				EA458B4F234288F800A37F3E /* ViewController.swift in Sources */,
+				EA458B7F2342A1FA00A37F3E /* FavoriteCollectionViewCell.swift in Sources */,
+				EA458B4F234288F800A37F3E /* PhotoListViewController.swift in Sources */,
+				EA458B752342A0D300A37F3E /* PhotoDetailViewController.swift in Sources */,
+				EA458B7D2342A1E000A37F3E /* PhotoCollectionViewCell.swift in Sources */,
 				EA458B4B234288F800A37F3E /* AppDelegate.swift in Sources */,
 				EA458B4D234288F800A37F3E /* SceneDelegate.swift in Sources */,
+				EA458B772342A0E400A37F3E /* FavoriteViewController.swift in Sources */,
 				EA458B6423428A4000A37F3E /* PersistenceHelper.swift in Sources */,
 				EA458B6623428AA200A37F3E /* PhotoPersistenceHelper.swift in Sources */,
 				EA458B7323429BB800A37F3E /* Secrets.swift in Sources */,
