@@ -51,7 +51,7 @@
                                         <size key="customSize" width="246" height="231"/>
                                         <connections>
                                             <outlet property="photoImage" destination="U85-dY-8gA" id="aKA-AI-vxo"/>
-                                            <segue destination="Nga-f3-xZk" kind="show" id="Nlk-h9-HYd"/>
+                                            <segue destination="Nga-f3-xZk" kind="show" identifier="photoToDetailSegue" id="Nlk-h9-HYd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -105,11 +105,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzS-tm-f0y">
+                                <rect key="frame" x="180" y="564" width="55" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="saveFavoriteButtonPressed:" destination="Nga-f3-xZk" eventType="touchUpInside" id="Tml-SO-CLc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Fob-mW-wLF"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ssp-RH-g4F"/>
+                    <connections>
+                        <outlet property="idLabel" destination="FgL-8L-2hP" id="5cc-L5-Wyh"/>
+                        <outlet property="photoImage" destination="cbM-ba-WIy" id="he6-ff-Vi7"/>
+                        <outlet property="tagLabel" destination="xgn-Ti-cPu" id="1xn-6m-Btm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXl-XF-H9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

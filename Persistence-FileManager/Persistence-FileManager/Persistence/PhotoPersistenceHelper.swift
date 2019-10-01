@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PhotoPersistenceHelper {
+class PhotoPersistenceHelper {
     static let manager = PhotoPersistenceHelper()
 
     func save(newPhoto: Photo) throws {

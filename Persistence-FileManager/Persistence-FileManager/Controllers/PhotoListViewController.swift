@@ -36,6 +36,20 @@ class PhotoListViewController: UIViewController {
         loadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndex = photoCollectionView.indexPath(for: sender as! UICollectionViewCell) else { print("no index selected")
+            return }
+        guard segue.identifier == "photoToDetailSegue" else { print("no ID'd segue")
+            return }
+        guard let photoDetailVC = segue.destination as? PhotoDetailViewController else {
+            print("no destination VC")
+            return }
+
+        photoDetailVC.photo
+         = photos[selectedIndex.row]
+        
+    }
+    
     private func configureCollectionView() {
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
