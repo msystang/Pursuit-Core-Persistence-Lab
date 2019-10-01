@@ -10,21 +10,61 @@ import UIKit
 
 class FavoriteViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var favoritesCollectionView: UICollectionView!
+    var favorites = [Photo]() {
+        didSet {
+            favoritesCollectionView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureCollectionView()
     }
-    */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
+    }
+    
+    private func configureCollectionView() {
+        favoritesCollectionView.delegate = self
+        favoritesCollectionView.dataSource = self
+    }
+ 
+    private func loadData() {
+        do {
+            favorites = try PhotoPersistenceHelper.manager.getPhotos()
+        } catch {
+            print(error)
+        }
+    }
+}
 
+extension FavoriteViewController: UICollectionViewDelegateFlowLayout {}
+
+extension FavoriteViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return favorites.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let favoriteCell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoriteCell", for: indexPath) as? FavoriteCollectionViewCell else {
+            fatalError("no cell ID")
+        }
+        
+        let favorite = favorites[indexPath.row]
+        
+        ImageHelper.manager.getImage(urlStr: favorite.imageURL) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let imageFromOnline):
+                    favoriteCell.photoImage.image = imageFromOnline
+                }
+            }
+        }
+        return favoriteCell
+    }
+    
 }
